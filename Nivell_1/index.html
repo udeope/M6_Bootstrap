@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- MAIN CSS -->
+<link rel="stylesheet" href="styles/main.css">
+    <!-- CDN BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- LOCAL BOOTSTRAP -->
+    <!-- <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+ 
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <!--Container Bootstrap  -->
+    <div class="container-fluid">
+      <!-- Cabecera con navBar -->
+      <nav
+        class="row navbar navbar-expand-md bg-dark navbar-dark"
+      >
+        <a class="col-1 navbar-brand" href="#"
+          ><img src="assets/images/logo.webp" alt="Logo"
+        /></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="col-3 logRegModals">
+          <!-- Link to Open the Modal -->
+          <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="modal"
+                data-target="#logModal"
+                href="#"
+                >LOGIN</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="modal"
+                data-target="#regModal"
+                href="#"
+                >SIGN UP</a
+              >
+            </li>
+          </ul>
+
+          <!-- The Modal -->
+          <div class="modal fade" id="logModal">
+            <div class="modal-dialog">
+              <div class="modal-content bg-dark text-white">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">LOGIN</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="nombre">Nombre usuario:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="usuario"
+                      placeholder="Nombre de usuario"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="pwd"
+                      placeholder="Contraseña"
+                    />
+                  </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer justify-content-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                  >
+                    Entrar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Button to Open the Modal -->
+          <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#regModal">
+     REGISTRO
+   </button> -->
+
+          <!-- The Modal -->
+          <div class="modal fade" id="regModal">
+            <div class="modal-dialog">
+              <div class="modal-content bg-dark text-white">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">SIGN UP</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="usuario"
+                      placeholder="Nombre de usuario"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="nombre">Email:</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="usuario"
+                      placeholder="Nombre de usuario"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="pwd"
+                      placeholder="Contraseña"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contraseña">Confirmar contraseña:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="pwd"
+                      placeholder="Contraseña"
+                    />
+                  </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer justify-content-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                  >
+                    Crear cuenta
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-8 collapse navbar-collapse justify-content-end"
+          id="collapsibleNavbar"
+        >
+          <!-- NavBar links -->
+          <ul class="navbar-nav p-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ratings">RATINGS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#nosotros">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacta">CONTACTA</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- <br /> -->
+      <!-- Carousel slider -->
+      <div id="demo" class="row carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/slider_img-webp/avenue.webp" alt="Avenida" class="img-fluid" >
+            <div class="carousel-caption">
+              <h3 class="text-dark">Los Caminos</h3>
+              <p class="text-dark">Disfruta de grandes paisajes!</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/slider_img-webp/camino.webp" alt="Camino" width="800" height="400">
+            <div class="carousel-caption">
+              <h3>Road</h3>
+              <p>Encuentra tu camino!</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/slider_img-webp/jungle.webp" alt="Jungla" width="800" height="400">
+            <div class="carousel-caption">
+              <h3>Jungle</h3>
+              <p>We love jungles!</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/slider_img-webp/woman.webp" alt="Woman" width="800" height="400">
+            <div class="carousel-caption">
+              <h3 class="text-dark">Nature</h3>
+              <p class="text-dark">Cuidamos la naturaleza!</p>
+            </div>   
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <!-- SERVICIOS -->
+<main class="mt-5">
+  <section id="servicios" class="row mb-5">
+    <article class="col-12 ">
+      <h1 class="text-center mt-3">EXPERIENCIAS BALAM</h1>
+      <h3 class="text-center mb-5">Consulta nuestros servicios</h3>
+      <div class="row mx-auto">
+      <div class="container col-md-4">
+        <h3 class="text-dark text-center">CHIAPAS</h3>
+        <div class="card img-fluid mx-auto" style="width:500px">
+          <img class="card-img-top" src="assets/images/Servicios/polynesia.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Explora</h4>
+            <p class="card-text">Todos los rincones.</p>
+            <a href="#" class="btn btn-info">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="container col-md-4">
+        <h3 class="text-dark text-center">YUCATÁN</h3>
+        <div class="card img-fluid mx-auto" style="width:500px">
+          <img class="card-img-top" src="assets/images/Servicios/away-1040726_640.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Recorre</h4>
+            <p class="card-text">Todas las maravillas.</p>
+            <a href="#" class="btn btn-info">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="container col-md-4">
+        <h3 class="text-dark text-center">BALAM</h3>
+        <div class="card img-fluid mx-auto" style="width:500px">
+          <img class="card-img-top" src="assets/images/Servicios/the-caucasus-5302236_640.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Descubre</h4>
+            <p class="card-text">Sus secretos.</p>
+            <a href="#" class="btn btn-info">Detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </article>
+  </section>
+<hr>
+<!-- BLOG -->
+<section id="blog" class="row">
+  <div class="col">
+    <h2 class="text-center mt-5 mb-5">BLOG</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+  <div class="col-md-5 mx-auto ">
+    <div class="p-5">
+      <a class="blog-link text-info" href="#">
+        <h2 class="font-weight-bold ">
+           Hola como estas 
+        </h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos rem ad nisi!</h3>
+      </a>
+      <p class="post-meta">Publicado por <a href="#">Edusanvil</a></p> el 25 de Abril, 2020.
+      <hr class="mt-5">
+    </div>
+  </div>
+  <div class="col-md-5 mx-auto">
+    <div class="p-5">
+      <a href="#" class="blog-link text-info">
+        <h2 class="font-weight-bold">
+           Hola como estas 
+        </h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos rem ad nisi!</h3>
+      </a>
+      <p class="post-meta text-muted">Publicado por <a href="#">Edusanvil</a></p>el 25 de Abril, 2020.
+      <hr class="mt-5">
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+
+
+  <div class="row">
+    <div class="col-md-1"></div>
+  <div class="col-md-5 mx-auto ">
+    <div class="p-5">
+      <a class="blog-link text-info" href="#">
+        <h2 class="font-weight-bold ">
+           Hola como estas 
+        </h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos rem ad nisi!</h3>
+      </a>
+      <p class="post-meta">Publicado por <a href="#">Edusanvil</a></p> el 25 de Abril, 2020.
+      <hr class="mt-5">
+    </div>
+  </div>
+  <div class="col-md-5 mx-auto">
+    <div class="p-5">
+      <a href="#" class="blog-link text-info">
+        <h2 class="font-weight-bold">
+           Hola como estas 
+        </h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos rem ad nisi!</h3>
+      </a>
+      <p class="post-meta text-muted">Publicado por <a href="#">Edusanvil</a></p>el 25 de Abril, 2020.
+      <hr class="mt-5">
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+
+  <div class="col-md-5 mx-auto">
+    <div class="p-5">
+      <a href="#" class="blog-link text-info">
+        <h2 class="font-weight-bold">
+           Hola como estas 
+        </h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos rem ad nisi!</h3>
+      </a>
+      <p class="post-meta text-muted">Publicado por <a href="#">Edusanvil</a></p>el 25 de Abril, 2020.
+    </div>
+  </div>
+</div>
+  <hr>
+</section>
+<hr>
+  <!-- TESTIMONIALS -->
+  <article>
+    <h2 class="text-center mt-5">RATES</h2>
+  <section class="row">
+  <div class="wrapper" id="ratings">
+    <div class="carousel slide" id="mySlider" data-ride="carousel" data-interval="9000" data-pause="hover">
+        <ol class="carousel-indicators">
+            <li data-target="#mySlider" data-slide-to="0" class="active"></li>
+            <li data-target="#mySlider" data-slide-to="1"></li>
+            <li data-target="#mySlider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner text-white">
+            <div class="carousel-item active">
+                <div class="content">
+                    <div class="employee">
+                        <div class="h3 text-uppercase">James Maddison</div>
+                        <div class="h6 text-mute">Customer</div>
+                    </div>
+                    <div class="testimonial bg-white text-dark"> <span class="fas fa-quote-left"></span>
+                        <div class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error iusto aliquid laboriosam voluptas enim sint expedita architecto in voluptates!</div> <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="content">
+                    <div class="employee">
+                        <div class="h3 text-uppercase">Jack Anderson</div>
+                        <div class="h6 text-mute">Director</div>
+                    </div>
+                    <div class="testimonial bg-white text-dark"> <span class="fas fa-quote-left"></span>
+                        <div class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error iusto aliquid laboriosam voluptas enim sint expedita architecto in voluptates!</div> <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="content">
+                    <div class="employee">
+                        <div class="h3 text-uppercase">William Wendy</div>
+                        <div class="h6 text-mute">Supervisor</div>
+                    </div>
+                    <div class="testimonial bg-white text-dark"> <span class="fas fa-quote-left"></span>
+                        <div class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error iusto aliquid laboriosam voluptas enim sint expedita architecto in voluptates!</div> <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+</section>
+</article>
+<hr>
+<!-- NOSOTROS -->
+<div id="nosotros" class="aboutus-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aboutus">
+                  <h2 class="aboutus-title">About Us</h2>
+                  <p class="aboutus-text">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                  <p class="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p>
+                  <a class="aboutus-more mb-5" href="#">read more</a>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aboutus-banner">
+                  <img src="assets/boy-2029804_1280.png" class="img-fluid" alt="Hombre coge de la mano a chico">
+              </div>
+          </div>
+          <div class="col-md-5 col-sm-6 col-xs-12">
+              <div class="feature">
+                  <div class="feature-box">
+                      <div class="clearfix">
+                          <div class="iconset">
+                              <span class="glyphicon glyphicon-cog icon"><i class="far fa-thumbs-up"></i></span>
+                          </div>
+                          <div class="feature-content">
+                              <h4>Work with heart</h4>
+                              <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="feature-box">
+                      <div class="clearfix">
+                          <div class="iconset">
+                              <span class="glyphicon glyphicon-cog icon"><i class="far fa-thumbs-up"></i></span>
+                          </div>
+                          <div class="feature-content">
+                              <h4>Reliable services</h4>
+                              <p>Donec vitae sapien ut libero venenatis faucibu. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="feature-box">
+                      <div class="clearfix">
+                          <div class="iconset">
+                              <span class="glyphicon glyphicon-cog icon"><i class="far fa-thumbs-up"></i></span>
+                          </div>
+                          <div class="feature-content">
+                              <h4>Great support</h4>
+                              <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<hr>
+<!-- CONTACTA -->
+<section id="contacta" class="m-5">
+<div class="container ">
+	<div class="row  justify-content-center">
+      <div class="col-md-10 col-md-offset-3">
+        <div class="well well-sm">
+          <form class="form-horizontal" action="" method="post">
+          <fieldset>
+            <legend class="ml-3">CONTACT US</legend>
+    
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+              </div>
+            </div>
+    
+            <!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Your E-mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+              </div>
+            </div>
+    
+            <!-- Message body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Your message</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="row mx-auto">
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+          </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
+	</div>
+</div>
+</section>
+
+</main>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">edusanvil.es</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+      <!-- Final div container-fluid -->
+    </div>
+<!-- Button Up -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+    <!-- SCRIPTS BOOTSTRAP -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
